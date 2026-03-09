@@ -37,5 +37,7 @@ public class ViewEmployeesManagedBean {
 		this.employees = employees;
 	}
 	
-	
+	public int getLength() {
+		return employees.size();
+	}
 }
