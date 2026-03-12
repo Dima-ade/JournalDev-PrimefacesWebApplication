@@ -1,3 +1,4 @@
+com\journaldev\jsfBeans\ItemsBean.class
 com\journaldev\jsfBeans\DateRangeBean.class
 com\journaldev\validator\DateRangeValidator.class
 com\journaldev\data\Employee.class

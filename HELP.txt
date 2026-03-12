@@ -11,3 +11,6 @@ http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/dateRangePicker.
 
 PrimeFaces - PickList Example
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/pickList.xhtml
+
+PrimeFaces - SelectOneMenu With Ajax update Example
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/selectOneMenu.xhtml
