@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head></h:head>
+
+    <h:body>
+        <h2>Primefaces Date Range Picker example</h2>
+        <p>
+            <p:outputLabel for="dateSelectBtn" value="#{dateRange.dateRangeString}"/>
+        </p>
+        <p:commandButton id="dateSelectBtn" value="Select new date range" type="button"
+                         onclick="PF('dateRangeDlg').show();"/>
+
+        <p:dialog closable="false"
+                  header="Date Range Picker" resizable="false"
+                  widgetVar="dateRangeDlg" minHeight="40" modal="true">
+            <p:outputPanel>
+                <h:form>
+                    <p:calendar id="idStartDate" binding="#{startDate}"
+                                value="#{dateRange.startDate}">
+                    </p:calendar>
+                    <p:calendar id="idEndDate" value="#{dateRange.endDate}">
+                        <f:validator validatorId="dateRangeValidator"/>
+                        <f:attribute name="startDateAttr" value="#{startDate}"/>
+                    </p:calendar>
+                    <br/>
+                    <p:messages id="messages" showDetail="true"
+                                autoUpdate="true"/>
+                    <br/>
+                    <p:commandButton value="Save" icon="ui-icon-check"/>
+                    <p:commandButton value="Cancel" icon="ui-icon-close"
+                                     immediate="true"
+                                     onclick="PF('dateRangeDlg').hide()"/>
+                </h:form>
+            </p:outputPanel>
+        </p:dialog>
+    </h:body>
+</html>

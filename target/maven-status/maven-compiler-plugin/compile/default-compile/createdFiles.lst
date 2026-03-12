@@ -1,2 +1,4 @@
-com\journaldev\data\Employee.class
+com\journaldev\jsfBeans\DateRangeBean.class
 com\journaldev\jsfBeans\ViewEmployeesManagedBean.class
+com\journaldev\validator\DateRangeValidator.class
+com\journaldev\data\Employee.class
