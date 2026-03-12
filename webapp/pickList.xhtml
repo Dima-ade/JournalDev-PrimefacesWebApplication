@@ -13,21 +13,21 @@
                         var="emp"
                         itemLabel="#{emp.name} (#{emp.dept})"
                         itemValue="#{emp}"
-                        converter="empConverter"/>
+                        converter="stuConverter"/>
             <p:commandButton value="Submit"
                              update="display" />
 
             <h:panelGrid id="display" columns="1">
                 <h3>Employees source list:</h3>
-                <ui:repeat value="#{pickListBean.listModel.source}" var="emp">
+                <p:repeat value="#{pickListBean.listModel.source}" var="emp">
                     <h:outputText value="#{emp.name} (#{emp.dept})"/>
                     <br/>
-                </ui:repeat>
+                </p:repeat>
                 <h3>Employees target list:</h3>
-                <ui:repeat value="#{pickListBean.listModel.target}" var="emp">
+                <p:repeat value="#{pickListBean.listModel.target}" var="emp">
                     <h:outputText value="#{emp.name} (#{emp.dept})"/>
                     <br/>
-                </ui:repeat>
+                </p:repeat>
             </h:panelGrid>
         </h:form>
     </h:body>
