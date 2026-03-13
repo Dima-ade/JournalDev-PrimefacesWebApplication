@@ -6,3 +6,4 @@ com\journaldev\converter\PickListEmpConverter.class
 com\journaldev\data\Student.class
 com\journaldev\jsfBeans\PickListBean.class
 com\journaldev\jsfBeans\ViewEmployeesManagedBean.class
+com\journaldev\jsfBeans\FileUploadBean.class

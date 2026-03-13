@@ -18,3 +18,6 @@ http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/selectOneMenu.xh
 
 PrimeFaces - Menu Item
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/menuitem.xhtml
+
+PrimeFaces - Simple File Upload
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/simpleFileUpload.xhtml
