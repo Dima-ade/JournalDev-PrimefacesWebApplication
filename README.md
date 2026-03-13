@@ -15,3 +15,6 @@ http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/pickList.xhtml
 
 PrimeFaces - SelectOneMenu With Ajax update Example
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/selectOneMenu.xhtml
+
+PrimeFaces - Menu Item
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/menuitem.xhtml
