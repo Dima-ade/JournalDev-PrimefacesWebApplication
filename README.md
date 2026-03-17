@@ -21,3 +21,6 @@ http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/menuitem.xhtml
 
 PrimeFaces - Simple File Upload
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/simpleFileUpload.xhtml
+
+PrimeFaces - Login Demo
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/loginDemo.xhtml
