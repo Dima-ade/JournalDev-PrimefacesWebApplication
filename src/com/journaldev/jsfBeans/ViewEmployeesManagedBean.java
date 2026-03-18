@@ -18,9 +18,8 @@ public class ViewEmployeesManagedBean {
 	public ViewEmployeesManagedBean(){
 		populateEmployeeList();
 	}
-	
-	@PostConstruct
-	public void populateEmployeeList(){
+
+	private void populateEmployeeList(){
 		for(int i = 1 ; i <= 10 ; i++){
 			Employee emp = new Employee();
 			emp.setEmployeeId(String.valueOf(i));
