@@ -58,9 +58,5 @@ The glassfish server must have the jar for postgresql under E:\Adela\Java\glassf
 The glassfish server must be configured on http://localhost:4848/  for Resources -> JDBC -> JDBC Connection Pools 
 and for Resources -> JDBC -> JDBC Resources 
 
-Resources -> JDBC -> JDBC Connection Pools:
-
-- 
-
 The page is:
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/employees.xhtml
