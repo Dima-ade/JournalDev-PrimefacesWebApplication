@@ -52,5 +52,15 @@ The bean ViewEmpFromDBManagedBean uses the datasource and entity manager as
         this.entityManagerFactory = Persistence.createEntityManagerFactory("bookstore-PU", props);
         EntityManager em = entityManagerFactory.createEntityManager();
         this.employees = em.createQuery("SELECT b FROM Employee b", Employee.class).getResultList();
+
+The glassfish server must have the jar for postgresql under E:\Adela\Java\glassfish5\glassfish\domains\domain1\lib
+
+The glassfish server must be configured on http://localhost:4848/  for Resources -> JDBC -> JDBC Connection Pools 
+and for Resources -> JDBC -> JDBC Resources 
+
+Resources -> JDBC -> JDBC Connection Pools:
+
+- 
+
 The page is:
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/employees.xhtml
