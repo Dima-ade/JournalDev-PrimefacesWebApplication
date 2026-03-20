@@ -1,7 +1,7 @@
 package com.journaldev.jsfBeans;
 
+import main.java.com.journaldev.jsfBeans.FileUploadBean;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.primefaces.event.FileUploadEvent;

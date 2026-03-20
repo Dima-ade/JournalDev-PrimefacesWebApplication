@@ -1,5 +1,6 @@
 package com.journaldev.jsfBeans;
 
+import main.java.com.journaldev.jsfBeans.UserLoginView;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;

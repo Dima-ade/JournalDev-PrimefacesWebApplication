@@ -44,14 +44,13 @@ Database DatabaseInitListener.java listener was created and initialized with val
 	<listener>
 		<listener-class>com.journaldev.listener.DatabaseInitListener</listener-class>
 	</listener>
-The bean ViewEmpFromDBManagedBean uses the datasource as
-public void init() {
-		FacesContext facesContext = FacesContext.getCurrentInstance();
-		ExternalContext externalContext = facesContext.getExternalContext();
-
-		this.dataSource = (DataSource) externalContext
-				.getApplicationMap()
-				.get("DB_DATASOURCE");
-	}
+The bean ViewEmpFromDBManagedBean uses the datasource and entity manager as
+        DataSource dataSource = initDatasource();
+		Map<String, Object> props = new HashMap<>();
+		props.put("javax.persistence.jtaDataSource", dataSource);
+		this.entityManagerFactory = Persistence.createEntityManagerFactory("bookstore-PU", props);
+		EntityManager em = entityManagerFactory.createEntityManager();
+		this.employees = em.createQuery("SELECT b FROM Employee b", Employee.class)
+				.getResultList();
 The page is:
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/employees.xhtml
