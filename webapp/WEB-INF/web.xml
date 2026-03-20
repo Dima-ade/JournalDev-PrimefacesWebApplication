@@ -20,14 +20,26 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>/faces/*</url-pattern>
 	</servlet-mapping>
-<!--	<context-param>-->
-<!--		<description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>-->
-<!--		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>-->
-<!--		<param-value>client</param-value>-->
-<!--	</context-param>-->
-<!--	<listener>-->
-<!--		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>-->
-<!--	</listener>-->
+
+	<!-- Context Parameters for DB -->
+	<context-param>
+		<param-name>DB_URL</param-name>
+		<param-value>jdbc:postgresql://localhost:5432/bookstore</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>DB_USER</param-name>
+		<param-value>postgres</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>DB_PASSWORD</param-name>
+		<param-value>postgres</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.journaldev.listener.DatabaseInitListener</listener-class>
+	</listener>
+
 	<context-param>
 		<param-name>primefaces.UPLOADER</param-name>
 		<param-value>commons</param-value>

@@ -24,3 +24,35 @@ http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/simpleFileUpload
 
 PrimeFaces - Login Demo
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/loginDemo.xhtml
+
+PrimeFaces - Employees from DB (uses postgresql database connection)
+Database DatabaseInitListener.java listener was created and initialized with values from web.xml
+<!-- Context Parameters for DB -->
+<context-param>
+<param-name>DB_URL</param-name>
+<param-value>jdbc:postgresql://localhost:5432/bookstore</param-value>
+</context-param>
+
+	<context-param>
+		<param-name>DB_USER</param-name>
+		<param-value>postgres</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>DB_PASSWORD</param-name>
+		<param-value>postgres</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.journaldev.listener.DatabaseInitListener</listener-class>
+	</listener>
+The bean ViewEmpFromDBManagedBean uses the datasource as
+public void init() {
+FacesContext facesContext = FacesContext.getCurrentInstance();
+ExternalContext externalContext = facesContext.getExternalContext();
+
+		this.dataSource = (DataSource) externalContext
+				.getApplicationMap()
+				.get("DB_DATASOURCE");
+	}
+The page is:
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/employees.xhtml
