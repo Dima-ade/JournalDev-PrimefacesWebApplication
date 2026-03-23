@@ -22,13 +22,7 @@ public class ViewEmpFromDBManagedBean {
 
 	private List<Employee> employees;
 
-//	@PersistenceContext(unitName = "bookstore-PU")
-//	private EntityManager em;
-
 	public ViewEmpFromDBManagedBean() {
-//		employees = em.createQuery("SELECT e FROM Employee e", Employee.class)
-//				.getResultList();
-
 		DataSource dataSource = initDatasource();
 		Map<String, Object> props = new HashMap<>();
 		props.put("javax.persistence.jtaDataSource", dataSource);
