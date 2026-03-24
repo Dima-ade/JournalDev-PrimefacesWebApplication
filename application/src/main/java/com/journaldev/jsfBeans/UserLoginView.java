@@ -1,6 +1,8 @@
 package com.journaldev.jsfBeans;
 
 import org.primefaces.context.RequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -11,9 +13,15 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public class UserLoginView {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserLoginView.class);
+
     private String username;
 
     private String password;
+
+    public UserLoginView() {
+        logger.info("=====================UserLoginView===========================");
+    }
 
     public String getUsername() {
         return username;
@@ -46,6 +54,5 @@ public class UserLoginView {
         FacesContext.getCurrentInstance().addMessage(null, message);
         RequestContext context = RequestContext.getCurrentInstance();
         context.addCallbackParam("loggedIn", loggedIn);
-        //PrimeFaces.current().ajax().addCallbackParam("loggedIn", loggedIn);
     }
 }

@@ -1,5 +1,8 @@
 package com.journaldev.jsfBeans;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -9,11 +12,14 @@ import java.util.List;
 @ManagedBean
 @ViewScoped
 public class ItemsBean {
+    private static final Logger logger = LoggerFactory.getLogger(ItemsBean.class);
+
     private List<String> items = new ArrayList<>();
     private String selectedItem;
 
 
     public ItemsBean() {
+        logger.info("=====================ItemsBean===========================");
         postInit();
     }
 

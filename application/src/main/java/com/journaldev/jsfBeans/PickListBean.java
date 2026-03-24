@@ -2,6 +2,8 @@ package com.journaldev.jsfBeans;
 
 import com.journaldev.data.Student;
 import org.primefaces.model.DualListModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -13,9 +15,11 @@ import java.util.List;
 @ManagedBean
 @RequestScoped
 public class PickListBean {
+    private static final Logger logger = LoggerFactory.getLogger(PickListBean.class);
     private DualListModel<Student> listModel;
 
     public PickListBean() {
+        logger.info("=====================PickListBean===========================");
         init();
     }
 

@@ -1,6 +1,8 @@
 package com.journaldev.jsfBeans;
 
 import com.journaldev.data.Employee;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -17,11 +19,15 @@ import java.util.Map;
 @ManagedBean
 @ApplicationScoped
 public class ViewEmpFromDBManagedBean {
+
+	private static final Logger logger = LoggerFactory.getLogger(ViewEmpFromDBManagedBean.class);
+
 	private final EntityManagerFactory entityManagerFactory;
 
 	private List<Employee> employees;
 
 	public ViewEmpFromDBManagedBean() {
+		logger.info("=====================ViewEmpFromDBManagedBean===========================");
 		DataSource dataSource = initDatasource();
 		Map<String, Object> props = new HashMap<>();
 		props.put("javax.persistence.jtaDataSource", dataSource);

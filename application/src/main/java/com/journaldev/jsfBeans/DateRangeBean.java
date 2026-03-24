@@ -1,5 +1,8 @@
 package com.journaldev.jsfBeans;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.text.DateFormat;
@@ -10,11 +13,13 @@ import java.util.Date;
 @ManagedBean(name = "dateRange")
 @SessionScoped
 public class DateRangeBean {
+    private static final Logger logger = LoggerFactory.getLogger(DateRangeBean.class);
     private Date startDate;
     private Date endDate;
     private DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
 
     public DateRangeBean() {
+        logger.info("=====================DateRangeBean===========================");
         Calendar c1 = Calendar.getInstance();
         endDate = c1.getTime();
         Calendar c2 = Calendar.getInstance();
