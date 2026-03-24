@@ -43,7 +43,7 @@ Database DatabaseInitListener.java listener was created and initialized with val
 		<param-value>postgres</param-value>
 	</context-param>
 	<listener>
-		<listener-class>com.journaldev.listener.DatabaseInitListener</listener-class>
+		<listener-class>listener.journaldev.DatabaseInitListener</listener-class>
 	</listener>
 The bean ViewEmpFromDBManagedBean uses the datasource and entity manager as
         DataSource dataSource = initDatasource();
