@@ -1,7 +1,6 @@
 package com.journaldev.jsfBeans;
 
 import com.journaldev.data.Employee;
-import com.journaldev.jsfBeans.ViewEmployeesManagedBean;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -9,5 +9,9 @@
         <module name="JournalDev-PrimefacesWebApplication" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="application" target="1.8" />
+      <module name="main-module" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
