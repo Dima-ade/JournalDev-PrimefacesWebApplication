@@ -60,3 +60,7 @@ and for Resources -> JDBC -> JDBC Resources
 
 The page is:
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/employees.xhtml
+
+PrimeFaces - throwing exception while upload
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/simpleFileUploadException.xhtml
+

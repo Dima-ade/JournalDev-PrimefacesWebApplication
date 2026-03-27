@@ -54,3 +54,6 @@ The bean ViewEmpFromDBManagedBean uses the datasource and entity manager as
 				.getResultList();
 The page is:
 http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/employees.xhtml
+
+PrimeFaces - throwing exception while upload
+http://localhost:8080/JournalDev-PrimefacesWebApplication/faces/simpleFileUploadException.xhtml

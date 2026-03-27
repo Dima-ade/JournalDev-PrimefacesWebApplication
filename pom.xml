@@ -17,6 +17,7 @@
 	<modules>
 		<module>application</module>
 		<module>database</module>
+		<module>exceptions</module>
 	</modules>
 
 	<build>
@@ -172,6 +173,13 @@
 				<artifactId>logstash-logback-encoder</artifactId>
 				<version>9.0</version>
 				<scope>compile</scope>
+			</dependency>
+
+			<!-- Source: https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>javax.ws.rs-api</artifactId>
+				<version>2.1.1</version>
 			</dependency>
 
 		</dependencies>
