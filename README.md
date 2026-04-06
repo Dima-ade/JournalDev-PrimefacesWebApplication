@@ -1,6 +1,11 @@
 Primefaces DataTable with pagination
 
-The application can be deployed on Glassfish server
+The application can be deployed on Glassfish server or Tomcat 9. JAVA_HOME should be Java 8.
+The file to rule for Java 8: env-jdk8.bat - contains:
+
+set JAVA_HOME=E:\Adela\Java\JDK\openlogic-openjdk-8u402-b06-windows-64
+
+set PATH=%JAVA_HOME%\bin;%PATH%
 
 After deploy:
 
